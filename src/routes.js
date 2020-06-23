@@ -1,10 +1,10 @@
-function AppRoutes ($stateProvider) {
-  $stateProvider.state('view1', {
+function AppRoutes ($stateProvider, $locationProvider) {
+  $stateProvider.state('state1', {
     url: '/',
     views: {
-      'main': ''
+      'main': 'view1'
     }
-  };
+  });
   $locationProvider.html5Mode(true);
 }
 AppRoutes.$inject = ['$stateProvider', '$locationProvider'];
